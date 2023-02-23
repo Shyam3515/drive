@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive And Listen</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+    <!-- Side bar -->
+    <div class="sidebar-toggle" id="toggle">
+        <i class="fa fa-eye white" aria-hidden="true"></i>
+    </div>
+    <div class="sidebar">
+        <h2>Drive & Listen</h2>
+        <div class="location-container">
+            <h4>Scroll down for more cities</h4>
+            <div class="locations">
+                <ul id="locations">
+                    <li>Mumbai</li>
+                    <li class="active">Delhi</li>
+                    <li>Benguluru</li>
+                    <li>Mumbai</li>
+                    <li>Delhi</li>
+                    <li>Benguluru</li>
+                    <li>Mumbai</li>
+                    <li>Delhi</li>
+                    <li>Benguluru</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="video-speed">
+            <h4>Car Speed</h4>
+            <div class="speed" id="speed">
+                <p>0.5x</p>
+                <p class="active">1x</p>
+                <p>1.5x</p>
+                <p>2x</p>
+            </div>
+        </div>
+
+        <div class="car-noise">
+            <h4>Car Noise : </h4>
+            <div class="mute" id="mute">off</div>
+        </div>
+
+        <div class="audio">
+            <h4>Car audio</h4>
+            <div class="audio-controls">
+                <div class="controls">
+                    <i class="fa fa-step-backward" id="prev" aria-hidden="true"></i>
+                    <i class="fa fa-play" id="play" aria-hidden="true"></i>
+                    <i class="fa fa-step-forward" id="next" aria-hidden="true"></i>
+                </div>
+                <div class="volume">
+                    <input type="range" min="0" max="100" val="50" id="volume">
+                </div>
+            </div>
+
+            <audio id="music" crossorigin autoplay></audio>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
